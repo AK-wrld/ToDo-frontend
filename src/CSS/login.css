@@ -1,0 +1,33 @@
+.loginBox {
+    width: 25%;
+    height: 70vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background-color: white; */
+    border-radius: 10px;
+    /* margin-top: 105px; */
+   
+    /* background: linear-gradient(180deg, rgb(176 247 245) 0%, rgb(179 199 227 / 63%) 100%); */
+
+}
+
+.signupBtn:hover {
+    color: white;
+}
+
+.error{
+    color: red;
+    font-size: 12px;
+}
+.passwordContainer {
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.log {
+    color: mediumvioletred;
+    text-shadow: 0 0 black;
+}

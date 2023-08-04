@@ -1,0 +1,95 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    background-color: blanchedalmond;
+    min-height: 100vh;
+}
+.box1 {
+    display: flex;
+    flex: 1;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    flex-direction: column;
+}
+.box2 {
+    display: flex;
+    flex: 1.5;
+    flex-direction: column;
+    
+}
+.box3 {
+    display: flex;
+    flex: 1.5;
+    flex-direction: column;
+}
+.logoContainer {
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+
+}
+.formContainer {
+    flex: 5;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+}
+.todoForm {
+    max-width: 80%;
+    min-width: 50%;
+    width: 70%;
+    /* height: 55%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.todoSubmitBtn {
+    width: 50%;
+    background-color: maroon !important;
+}
+.todoBox {
+    width: 95%;
+    margin: 0 auto;
+    border-bottom: 1px solid lightgray;
+    overflow: auto;
+    padding: 8px;
+}
+.name {
+    display: inline-flex;
+    padding-right: 3%;
+}
+.statusIcon {
+    color: rgb(47, 255, 54);
+}
+.deleteTodo {
+    position: relative;
+    width: 7%;
+}
+.deleteTodo > i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.emptyBox {
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.emptyBox>h3 {
+    width: 95%;
+    padding: 8px;
+    margin: 0 auto;
+}
+.flasestatusIcon {
+    color: gray;
+    cursor: pointer;
+}
