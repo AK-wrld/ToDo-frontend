@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
 import '../CSS/Home.css'
+import '../CSS/Media.css'
 import Logo from '../images/logo.png'
 import { addTodo, deleteATodo, fetchTodos, fetchUser } from '../Api'
 import { useSelector } from 'react-redux'
+import {useNavigate } from 'react-router-dom'
 import AlertContext from '../context/ContextFiles/AlertContext'
 import Alert from './Alert'
 import Todo from './Todo'
@@ -13,7 +15,7 @@ const Home = () => {
   const hasToken = useSelector((state)=>state.hasToken)
   const ongoingTodoList = useSelector((state)=>state.ongoingTodoList)
   const completedTodoList = useSelector((state)=>state.completedTodoList)
-
+const navigate = useNavigate()
   const alertProps = useContext(AlertContext)
   const [name,setName] = useState('')
   const [desc,setDesc] = useState('')
@@ -44,8 +46,42 @@ const Home = () => {
 
     }
 }
+const logout = ()=> {
+  window.localStorage.clear()
+  navigate('/login')
+}
     return (
-    userData && <div className='main'>
+      <>
+      <div className="box1 resizedBox">
+        <div className="logoContainer logoContainerResized pt-2 mb-2">
+          <img src={Logo} alt="" width={90} height={45} />
+          <h4 className='cartoon textShadow m-0'>Welcome Back {userData.username}</h4>
+
+        </div>
+        <div className="formContainer">
+          <h5 className="cartoon textShadow">Lets Add a new Todo!!</h5>
+          <form className='todoForm'>
+            <div className="mb-3">
+              <label htmlFor="exampleInputEmail1" className="form-label cartoon textShadow">Name</label>
+              <input type="text" className="form-control cartoon " id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(ev)=>setName(ev.target.value)}/>
+
+            </div>
+            <div className="mb-3">
+              <label htmlFor="exampleInputPassword1" className="form-label cartoon textShadow">Description</label>
+              <textarea type="text" className="form-control cartoon " id="exampleInputPassword1" onChange={(ev)=>setDesc(ev.target.value)}/>
+              <div id="emailHelp" className="form-text cartoon">A short description always works.</div>
+            </div>
+            <div className="mb-3 form-check">
+              <input type="checkbox" className="form-check-input" id="exampleCheck1" onClick={()=>setStatus(!status)}/>
+              <label className="form-check-label cartoon" for="exampleCheck1 textShadow" >Status</label>
+            </div>
+            <input type='button' value="Submit" className="btn btn-primary cartoon todoSubmitBtn textShadow" onClick={submitTodo}/>
+          </form>
+        <button type="button" className="btn btn-light mt-5" onClick={logout}><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+
+        </div>
+      </div>
+    <div className='main'>
       <Alert/>
       <div className="box1">
         <div className="logoContainer pt-2">
@@ -72,6 +108,7 @@ const Home = () => {
             </div>
             <input type='button' value="Submit" className="btn btn-primary cartoon todoSubmitBtn textShadow" onClick={submitTodo}/>
           </form>
+        <button type="button" className="btn btn-light mt-5" onClick={logout}><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
         </div>
       </div>
       <div className="box2">
@@ -109,6 +146,7 @@ const Home = () => {
         }
       </div>
     </div>
+      </>
   )
 }
 

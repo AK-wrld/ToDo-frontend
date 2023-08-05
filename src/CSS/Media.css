@@ -1,0 +1,35 @@
+@media screen and  (max-width: 765px) {
+    .resizedBox {
+        display: flex !important;
+    }
+    .box1 {
+        display: none;
+    }
+}
+@media screen and  (min-width:370px) and (max-width: 510px) {
+    .loginBox {
+        width: 100%;
+    }
+    .signupBox {
+        width: 100%;
+
+    }
+}   
+@media screen and  (min-width:510px) and (max-width: 767px) {
+    .loginBox {
+        width: 90%;
+    }
+    .signupBox {
+        width: 90%;
+
+    }
+}   
+@media screen and  (min-width:767px) and (max-width: 1000px) {
+    .loginBox {
+        width: 50%;
+    }
+    .signupBox {
+        width: 50%;
+
+    }
+}   

@@ -135,7 +135,7 @@ export default function Signup() {
                     delay: 0.5,
                     ease: easeOut
                 }}>
-                <img src={Logo} alt="" width={275} height={100} style={{ margin: "0 auto" }} />
+                <img src={Logo} alt="" style={{ minWidth:"55px",minHeight:"20px",maxWidth:"275px",maxHeight:"100px" }} />
                 <div className="container" style={{ "display": "flex", "justifyContent": "center" }}>
 
                     <h2 className='text textShadow log' >SIGN IN</h2>

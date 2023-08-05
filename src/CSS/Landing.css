@@ -1,0 +1,6 @@
+.landingDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+}

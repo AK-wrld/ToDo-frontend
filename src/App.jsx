@@ -7,9 +7,10 @@ import {
 } from "react-router-dom";
 import Signup from './components/Signup';
 import Login from './components/Login';
+import Landing from './components/Landing';
 import LoginState from './context/StateFiles/LoginState'
 import AlertState from './context/StateFiles/AlertState';
-import Landing from './components/Landing';
+
 import Home from './components/Home';
 const App = () => {
   
@@ -20,6 +21,9 @@ const App = () => {
           <BrowserRouter>
 
             <Routes>
+              <Route exact path="/" element={<Landing/>}>
+
+              </Route>
               <Route exact path="/home" element={<Home />}>
 
               </Route>

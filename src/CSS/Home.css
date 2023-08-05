@@ -51,7 +51,7 @@
     
 }
 .todoSubmitBtn {
-    width: 50%;
+    max-width: 50%;
     background-color: maroon !important;
 }
 .todoBox {
@@ -70,7 +70,8 @@
 }
 .deleteTodo {
     position: relative;
-    width: 7%;
+    width: 5%;
+    height: 25px;
 }
 .deleteTodo > i {
     position: absolute;
@@ -92,4 +93,13 @@
 .flasestatusIcon {
     color: gray;
     cursor: pointer;
+}
+.resizedBox {
+    background-color: blanchedalmond;
+    position: static;
+    display: none;
+}
+.logoContainerResized {
+    justify-content: center;
+    gap: 4%;
 }

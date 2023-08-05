@@ -108,7 +108,7 @@ const Login = () => {
         ease:easeOut
       }}>
         
-          <img src={Logo} alt="" width={275} height={100} style={{margin:"0 auto"}}/>
+          <img src={Logo} alt=""  style={{minWidth:"55px",minHeight:"20px",maxWidth:"275px",maxHeight:"100px"}}/>
         <div className="container" style={{ "display": "flex", "justifyContent": "center" }}>
           <h2 className='text log'>LOG IN </h2>
         </div>
